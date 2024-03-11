@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Testing</title>
+    <style>
+        body{
+	        
+	        justify-content:center;
+			background-color:skyblue;
+    }
+    .reg{
+			display:flex;
+	        width:300px;
+	        height:240px;
+			justify-content: center;
+	        margin-top:10px;
+	        margin-left:6px;
+	        padding-top:35px;
+	        padding-left:595px;
+	        padding-right:15px;
+	        border-radius:18px;
+			border-color: aliceblue;
+    }
+	.reg1{
+			display:flex;
+	        width:300px;
+	        height:160px;
+			justify-content: center;
+	        margin-top:5px;
+	        margin-left:6px;
+	        padding-top:45px;
+	        padding-left:595px;
+	        padding-right:15px;
+	        border-radius:18px;
+			border-color: aliceblue;
+	}
+    .textarea{
+	        width: 280px;
+			height: 70px;
+			border-radius: 10px;
+			margin-top: 12px;
+    }
+	.textarea1{
+		width: 280px;
+		height: 25px;
+		border-radius: 10px;
+		margin-top: 12px;
+	}
+	.textarea2{
+		width: 280px;
+		height: 25px;
+		border-radius: 10px;
+		margin-top: 12px;
+	}
+	.head1{
+		height:50px;
+		width: 100%;
+		text-align: center;
+		margin-top: 65px;
+	}
+	.test{	
+		border-radius: 14px;
+		margin-top: 10px;
+		font-size: medium;
+	}
+	label{
+		font-size: large;
+	}
+	.result{
+		text-align: center;
+	}
+	ul{
+		margin-left: 300px;
+	}
+    </style>
+</head>
+<body>
+	<div class="head1"><h2>RegexTester : Test your Regex Skills.</h2></div>
+    <div class="reg">
+				<form action="/results" method="post">
+					<label>Regex Pattern:</label>
+					<input type="text" class="textarea1" name="regex_pattern" palceholder="Enter the regex pattern">
+					<br>
+					<br>
+					<label>Test String:</label>
+					<br>
+					<textarea class="textarea" name="test_string" palceholder="Enter the test string"></textarea><br>
+					<input type="submit" class="test" value="  Test  ">
+				</form>
+	</div>
+	<div class="result">
+		<h3>Results:</h3>
+		<h3>{{ results }}</h3>
+			<li>
+				{{matches}}
+			</li>
+	</div>	
+	<div class="reg1">
+		<form action="/email_id" method="post">
+			<h2> Email Id Validation:</h2>
+			<label>Email id:</label>
+				<br>
+				<input type="email"class="textarea2" name="emailid" palceholder="Enter the email id">
+				<input type="submit" class="test" value="  Validate  ">
+		</form>
+	</div>
+	<div class="result">
+		<h3>Results:</h3>
+		<h3>{{ email_results }}</h3>
+	</div>
+</body>
+</html>
